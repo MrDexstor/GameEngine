@@ -49,7 +49,7 @@ import java.util.Objects;
             tickingStory = getActiveStory();
         }
 
-        public static void buildStory()
+        public static void buildStory();
 
         public static void unbuildStory(File f) {
             try {

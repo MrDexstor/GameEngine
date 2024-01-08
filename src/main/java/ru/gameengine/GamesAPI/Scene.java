@@ -20,7 +20,7 @@ public class Scene {
 
     public Scene ();
 
-    public void loadActionsFromJSON ()
+    public void loadActionsFromJSON ();
 
     @SuppressWarnings("all")
     public void loadActionsFromJSON(ArrayList<HashMap<String,Object>> acts) {

@@ -107,7 +107,7 @@ public class Game {
     public void readLibraries() {
         libraries.clear(); FileManager.listInDirAndDo(storyFolder, "lib", Filters.onlyJs, (f) -> {libraries.add(f);});}
 
-    public void addScene()
+    public void addScene();
 
     public void addScript(File f) {
         GameScript scr = new GameScript(f);
