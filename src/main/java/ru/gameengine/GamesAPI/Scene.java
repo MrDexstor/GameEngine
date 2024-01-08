@@ -17,17 +17,10 @@ public class Scene {
 
     public final Game story;
 
-    public final SceneJSON json;
 
-    public Scene(Game story, SceneJSON json) {
-        this.id = json.id;
-        this.story = story;
-        if(json.lang.equals("js")) this.scriptId = json.script;
-        else if(json.lang.equals("json")) loadActionsFromJSON(json);
-        this.json = json;
-    };
+    public Scene ();
 
-    public void loadActionsFromJSON(SceneJSON json) { loadActionsFromJSON(json.actions); }
+    public void loadActionsFromJSON ()
 
     @SuppressWarnings("all")
     public void loadActionsFromJSON(ArrayList<HashMap<String,Object>> acts) {
