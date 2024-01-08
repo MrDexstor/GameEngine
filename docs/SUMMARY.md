@@ -1,5 +1,6 @@
 # Table of contents
 
-* [Welcome](README.md)
-* Guides
-    * [First Steps](First_Steps.md)
+* [Начало](README.md)
+* Гайды
+    * [Первые шаги](First_Steps.md)
+*[Персонажи](characters.md) 
