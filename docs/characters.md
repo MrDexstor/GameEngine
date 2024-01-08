@@ -43,7 +43,7 @@ public class Script {
         // Получаем объект игрока из event
         player = event.getPlayer();
         
-        CharacterBuilder dex = new CharacterBuilder("textures/entity/mrdexstor.png", new BlockPos(player.getX(), player.getY()+5, player.getZ()), player.level);
+        CharacterBuilder my_first_npc = new CharacterBuilder(textures/character/example.png", new BlockPos(12, 71, 1012), player.level);
     }
 }
 ```
