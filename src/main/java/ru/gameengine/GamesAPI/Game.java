@@ -107,20 +107,7 @@ public class Game {
     public void readLibraries() {
         libraries.clear(); FileManager.listInDirAndDo(storyFolder, "lib", Filters.onlyJs, (f) -> {libraries.add(f);});}
 
-    public void addScene(File f) {
-        try {
-            SceneJSON json = FileManager.jsonToJava(f, SceneJSON.class);
-            Scene scene = new Scene(this,json);
-            scenes.put(json.id,scene);
-        } catch (Exception e) { e.printStackTrace(); }
-    }
-
-    public void addScene(SceneJSON json) {
-        try {
-            Scene scene = new Scene(this,json);
-            scenes.put(json.id,scene);
-        } catch (Exception e) { e.printStackTrace(); }
-    }
+    public void addScene();
 
     public void addScript(File f) {
         GameScript scr = new GameScript(f);

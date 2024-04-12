@@ -49,27 +49,7 @@ import java.util.Objects;
             tickingStory = getActiveStory();
         }
 
-        public static void buildStory(Game story) {
-            Path worldPath = Objects.requireNonNull(ServerLifecycleHooks.getCurrentServer()).getWorldPath(FolderName.ROOT);
-            File worldFolder = worldPath.toFile();
-            File buildFolder = new File(worldFolder, "ge_builds");
-            buildFolder.mkdir();
-
-            ArrayList<SceneJSON> scenes = new ArrayList<SceneJSON>();
-            ArrayList<PackedScriptData> scripts = new ArrayList<PackedScriptData>();
-            ArrayList<PackedLibData> libs = new ArrayList<PackedLibData>();
-
-            story.scenes.forEach((key, sc) -> scenes.add(sc.json));
-            story.scripts.forEach((key, sc) -> scripts.add(sc.toPacked()));
-            story.libraries.forEach((sc) -> libs.add(story.packLib(sc)));
-
-            PackedStoryData data = new PackedStoryData();
-            data.id = story.storyId;
-            data.scenes = scenes;
-            data.scripts = scripts;
-            data.libs = libs;
-            FileManager.javaToJson(new File(buildFolder, story.storyId + ".game"), data);
-        }
+        public static void buildStory();
 
         public static void unbuildStory(File f) {
             try {
